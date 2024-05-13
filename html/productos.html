@@ -8,6 +8,7 @@
     <style>
         body {
             background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
         }
 
         .container {
@@ -16,21 +17,22 @@
 
         .product-item {
             margin-bottom: 30px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .product-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .product-image {
             cursor: pointer;
+            transition: transform 0.3s;
             border-radius: 10px;
-            transition: transform 0.3s ease;
         }
 
         .product-image:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .product-description {
@@ -46,6 +48,17 @@
             text-align: center;
             margin-top: 30px;
         }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +73,9 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="quienes_somos.html">Quiénes Somos</a>
@@ -78,17 +94,29 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                <div class="product-item">
-                    <img src="https://via.placeholder.com/200x200" class="img-fluid product-image" alt="Producto 1">
-                    <div class="product-description">
-                        <h4>Producto 1</h4>
-                        <p>Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="product-item card">
+                    <img src="https://via.placeholder.com/200x200" class="img-fluid product-image card-img-top" alt="Producto 1">
+                    <div class="product-description card-body">
+                        <h4 class="card-title">Producto 1</h4>
+                        <p class="card-text">Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <p class="product-price">$19.99</p>
                         <button class="btn btn-primary">Añadir al Carrito</button>
                     </div>
                 </div>
             </div>
             <!-- Repite el mismo patrón para los demás productos -->
+            <div class="col-md-3">
+                <div class="product-item card">
+                    <img src="https://via.placeholder.com/200x200" class="img-fluid product-image card-img-top" alt="Producto 2">
+                    <div class="product-description card-body">
+                        <h4 class="card-title">Producto 2</h4>
+                        <p class="card-text">Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="product-price">$29.99</p>
+                        <button class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega más productos según sea necesario -->
         </div>
         <div class="row">
             <div class="col-md-12 product-number">
